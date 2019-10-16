@@ -10,6 +10,18 @@ class ehs
 {
 
     /**
+     * Convert the format of a date string
+     *
+     * @param $in
+     * @param $out
+     * @param string $string
+     * @return string
+     */
+    public static function convertDateString($in, $out, $string){
+        return \DateTime::createFromFormat($in, $string)->format($out);
+    }
+
+    /**
      * Add X amount of days to a date string, returning a string
      *
      * @param $date
