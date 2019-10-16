@@ -18,4 +18,6 @@ $testing = ehs::helloWorld();
 
 done!
 
+Testing: ehs> ./vendor/bin/phpunit --bootstrap ./vendor/autoload.php ./tests/
+
 Todos: tests
