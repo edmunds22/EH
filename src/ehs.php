@@ -23,7 +23,20 @@ class ehs
         }
         return true;
     }
-
+    /**
+     * Validate a string is in d/m/Y format
+     *
+     * @param $date
+     * @return bool
+     */
+    public static function validateDMY($date)
+    {
+        $date = \DateTime::createFromFormat('d/m/Y', $date);
+        if (!$date) {
+            return false;
+        }
+        return true;
+    }
 
     /**
      * Convert the format of a date string
