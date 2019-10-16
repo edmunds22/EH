@@ -1,0 +1,13 @@
+{
+    "name": "edmunds22/eh",
+    "description": "Edmunds' php helpers",
+    "type": "library",
+    "authors": [
+        {
+            "name": "William Edmunds",
+            "email": "will@wpedmunds.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
