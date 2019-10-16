@@ -11,11 +11,12 @@ class ehs
 
     /**
      * hello world!
+     *
+     * @return string
      */
     public static function helloWorld()
     {
-        echo 'hello world!';
-        die();
+        return 'hello world!';
     }
 
     /**
