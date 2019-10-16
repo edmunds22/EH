@@ -10,6 +10,15 @@ class ehs
 {
 
     /**
+     * hello world!
+     */
+    public static function helloWorld()
+    {
+        echo 'hello world!';
+        die();
+    }
+
+    /**
      * Validate a string is in Y-m-d format
      *
      * @param $date
@@ -23,6 +32,7 @@ class ehs
         }
         return true;
     }
+
     /**
      * Validate a string is in d/m/Y format
      *
