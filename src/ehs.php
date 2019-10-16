@@ -10,6 +10,22 @@ class ehs
 {
 
     /**
+     * Validate a string is in Y-m-d format
+     *
+     * @param $date
+     * @return bool
+     */
+    public static function validateYMD($date)
+    {
+        $date = \DateTime::createFromFormat('Y-m-d', $date);
+        if (!$date) {
+            return false;
+        }
+        return true;
+    }
+
+
+    /**
      * Convert the format of a date string
      *
      * @param $in
@@ -17,7 +33,8 @@ class ehs
      * @param string $string
      * @return string
      */
-    public static function convertDateString($in, $out, $string){
+    public static function convertDateString($in, $out, $string)
+    {
         return \DateTime::createFromFormat($in, $string)->format($out);
     }
 
@@ -31,7 +48,7 @@ class ehs
      */
     public static function addDaysToDateString($date, $numberOfDays, $format = 'd/m/Y')
     {
-        return \DateTime::createFromFormat($format, $date)->modify('+'.$numberOfDays.' day')->format($format);
+        return \DateTime::createFromFormat($format, $date)->modify('+' . $numberOfDays . ' day')->format($format);
     }
 
     /**
@@ -67,7 +84,7 @@ class ehs
         }
 
         if ($start === 1) {
-            $index = $index +1;
+            $index = $index + 1;
         }
 
         return $index;
