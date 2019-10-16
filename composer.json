@@ -1,0 +1,18 @@
+{
+    "name": "edmunds22/ehs",
+    "description": "Edmunds' php helpers",
+    "type": "library",
+    "authors": [
+        {
+            "name": "William Edmunds",
+            "email": "will@wpedmunds.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "edmunds22\\ehs\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
