@@ -16,6 +16,56 @@ final class DateTest extends TestCase
         $this->assertEquals(
             false,
             ehs::validateDMY('19/2')
-        );        
+        ); 
+
+        $this->assertEquals(
+            true,
+            ehs::validateYMD('2019-09-01')
+        );
+
+        $this->assertEquals(
+            false,
+            ehs::validateYMD('2/19')
+        );         
     }
+
+    public function testCanConvertDateStringFormat(){
+
+        $in = '2019-07-26';
+        $out = '26/07/2019';
+
+        $this->assertEquals(
+            ehs::convertDateString('Y-m-d', 'd/m/Y', $in),
+            $out
+        );
+    }
+
+    public function testCanAddDaysToDate(){
+
+        $in = '20/07/2019';
+        $out = '26/07/2019';
+
+        $this->assertEquals(
+            $out,
+            ehs::addDaysToDateString($in, 6, 'd/m/Y')
+        );
+
+    }
+
+    public function testCanGetCorrectDayIndex(){
+
+        $in = 'Wed';
+
+        $this->assertEquals(
+            2,
+            ehs::weekDayIndex($in)
+        );
+
+        $this->assertEquals(
+            3,
+            ehs::weekDayIndex($in, 1)
+        );        
+
+    }
+
 }
