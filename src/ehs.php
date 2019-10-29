@@ -19,6 +19,15 @@ class ehs
         return 'hello world!';
     }
 
+    public static function forceDownload($path)
+    {
+        header("Content-Description: File Transfer");
+        header("Content-Type: application/octet-stream");
+        header("Content-Disposition: attachment; filename=\"" . basename($path) . "\"");
+        readfile($path);
+        exit();
+    }
+
     /**
      * Validate a string is in Y-m-d format
      *
