@@ -28,6 +28,18 @@ class ehs
         exit();
     }
 
+
+    /**
+     * Return a string with non alpha-num-space characters removed
+     *
+     * @param $input
+     * @return string
+     */
+    public static function alphaNumSp($input='')
+    {
+        return preg_replace("/[^A-Za-z0-9 ]/", "", $input);
+    }
+
     /**
      * Validate a string is in Y-m-d format
      *
