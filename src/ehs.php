@@ -28,6 +28,20 @@ class ehs
         exit();
     }
 
+    /**
+     * Convert a flat array of values into a commented-comma-separated list for use on MySql 'IN' statements
+     *
+     * Example: array(1,2,3) = '1', '2', '3'
+     *
+     * Warning: Input array should be correctly sanitized
+     *
+     * @param $inputs Array
+     * @return string
+     */
+    public static function arrayToSqlInList($inputs = [])
+    {
+        return "'".implode("'".","."'", $inputs)."'";
+    }
 
     /**
      * Return a string with non alpha-num-space characters removed
