@@ -29,6 +29,20 @@ class ehs
     }
 
     /**
+     * Convert input value into a float value of X precision
+     *
+     * Example: $1,123.3 = 1123.30 (with precision 2)
+     *
+     * @param $in String
+     * @param $points Integer
+     * @return string
+     */
+    public static function filteredFloat($in, $points = 2)
+	{
+        return number_format((float)preg_replace("/[^0-9.]/", "",  $in), $points, '.', '');
+    }
+
+    /**
      * Convert a flat array of values into a commented-comma-separated list for use on MySql 'IN' statements
      *
      * Example: array(1,2,3) = '1', '2', '3'
