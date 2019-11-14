@@ -12,11 +12,11 @@ Useful PHP helper functions
 
 `composer update`
 
-`use \edmunds22\ehs\ehs as ehs;
+`use \edmunds22\ehs\ehs as ehs;`
 
-$testing = ehs::helloWorld();`
+`$testing = ehs::helloWorld();`
 
-done!
+**done!**
 
 Testing: `./vendor/bin/phpunit --bootstrap ./vendor/autoload.php ./tests/`
 
