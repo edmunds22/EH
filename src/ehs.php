@@ -69,6 +69,17 @@ class ehs
     }
 
     /**
+     * Return a string with uncommon search string characters removed
+     *
+     * @param $input
+     * @return string
+     */
+    public static function searchValue($input='')
+    {
+        return preg_replace("/[^A-Za-z&.0-9 ]/", "", $input);
+    }
+
+    /**
      * Validate a string is in Y-m-d format
      *
      * @param $date
