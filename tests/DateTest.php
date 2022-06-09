@@ -68,4 +68,15 @@ final class DateTest extends TestCase
 
     }
 
+    public function testGeneratesCorrectSlug(){
+
+        $in = 'my testing slug!7&^--';
+
+        $this->assertEquals(
+            'my-testing-slug-7and',
+            ehs::generateSlug($in)
+        );       
+
+    }
+
 }
