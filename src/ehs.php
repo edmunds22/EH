@@ -38,8 +38,8 @@ class ehs
      * @return string
      */
     public static function filteredFloat($in, $points = 2)
-	{
-        return number_format((float)preg_replace("/[^0-9.]/", "",  $in), $points, '.', '');
+    {
+        return number_format((float) preg_replace("/[^0-9.]/", "", $in), $points, '.', '');
     }
 
     /**
@@ -54,7 +54,7 @@ class ehs
      */
     public static function arrayToSqlInList($inputs = [])
     {
-        return "'".implode("'".","."'", $inputs)."'";
+        return "'" . implode("'" . "," . "'", $inputs) . "'";
     }
 
     /**
@@ -63,7 +63,7 @@ class ehs
      * @param $input
      * @return string
      */
-    public static function alphaNumSp($input='')
+    public static function alphaNumSp($input = '')
     {
         return preg_replace("/[^A-Za-z0-9 ]/", "", $input);
     }
@@ -74,7 +74,7 @@ class ehs
      * @param $input
      * @return string
      */
-    public static function searchValue($input='')
+    public static function searchValue($input = '')
     {
         return preg_replace("/[^A-Za-z&.0-9 ]/", "", $input);
     }
@@ -174,11 +174,34 @@ class ehs
         return $index;
     }
 
-    public static function generateSlug($input, $delimiter = '-'){
+    public static function generateSlug($input, $delimiter = '-')
+    {
 
         $slug = strtolower(trim(preg_replace('/[\s-]+/', $delimiter, preg_replace('/[^A-Za-z0-9-]+/', $delimiter, preg_replace('/[&]/', 'and', preg_replace('/[\']/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $input))))), $delimiter));
 
         return $slug;
+
+    }
+
+    public static function spamFinder($input)
+    {
+
+        $checking = [
+            'instant sales leads',
+            'CNN World Today',
+            'My name is eric',
+            'Millions of instant sales leads',
+            'Business database',
+            'Marketing package',
+            'showbiz',
+        ];
+        foreach ($checking as $chk) {
+            if (stripos($chk, $input) !== false) {
+                return true;
+            }
+        }
+
+        return false;
 
     }
 
