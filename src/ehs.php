@@ -194,6 +194,8 @@ class ehs
             'Business database',
             'Marketing package',
             'showbiz',
+			'Backlink',
+			'tiktok'
         ];
         foreach ($checking as $chk) {
             if (stripos($chk, $input) !== false) {
