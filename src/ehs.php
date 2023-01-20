@@ -195,7 +195,8 @@ class ehs
             'Marketing package',
             'showbiz',
 			'Backlink',
-			'tiktok'
+			'tiktok',
+			'phenyl'
         ];
         foreach ($checking as $chk) {
             if (stripos($chk, $input) !== false) {
