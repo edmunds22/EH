@@ -196,7 +196,11 @@ class ehs
             'showbiz',
 			'Backlink',
 			'tiktok',
-			'phenyl'
+			'phenyl',
+			'betting',
+			'casino',
+            'leadgeneration',
+            'lead generation'
         ];
         foreach ($checking as $chk) {
             if (stripos($chk, $input) !== false) {
