@@ -200,7 +200,8 @@ class ehs
 			'betting',
 			'casino',
             'leadgeneration',
-            'lead generation'
+            'lead generation',
+            'authority boost'
         ];
         foreach ($checking as $chk) {
             if (stripos($chk, $input) !== false) {
