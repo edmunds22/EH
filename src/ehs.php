@@ -194,14 +194,16 @@ class ehs
             'Business database',
             'Marketing package',
             'showbiz',
-			'Backlink',
-			'tiktok',
-			'phenyl',
-			'betting',
-			'casino',
+            'Backlink',
+            'tiktok',
+            'phenyl',
+            'betting',
+            'casino',
             'leadgeneration',
             'lead generation',
-            'authority boost'
+            'authority boost',
+            'реклама',
+            'Уаndех'
         ];
         foreach ($checking as $chk) {
             if (stripos($chk, $input) !== false) {
