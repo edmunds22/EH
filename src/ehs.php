@@ -216,7 +216,7 @@ class ehs
     }
 
     //credit to https://stackoverflow.com/users/251760/jonathan
-    function timezoneList() {
+    public static function timezoneList() {
         static $timezones = null;
     
         if ($timezones === null) {
